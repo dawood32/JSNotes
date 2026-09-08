@@ -1,0 +1,9 @@
+.styledList {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.styledList li {
+  margin-bottom: 0.5rem;
+}
