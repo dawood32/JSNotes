@@ -14,21 +14,29 @@ body {
 
 /* Navbar (Top) */
 .top-nav {
-  background-color: #4361ee;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 2.5rem;
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
 }
 .top-nav h1 {
   margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.top-nav h1::before {
+  content: "✨";
   font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
 }
 
 /* Layout */
@@ -88,9 +96,10 @@ body {
   color: #111827;
 }
 .sidebar a.active {
-  background-color: #EEF2FF;
-  color: #4F46E5;
+  background-color: #e0f2fe;
+  color: #0284c7;
   font-weight: 600;
+  border-right: 3px solid #0284c7;
 }
 
 /* Main Content */
@@ -106,14 +115,14 @@ body {
   max-width: 900px; /* Constrain reading width */
 }
 .main-content h1 {
-  color: #4361ee;
+  color: #0f172a;
   margin-bottom: 1.5rem;
   font-size: 2.15rem;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
 .main-content h2 {
-  color: #4361ee;
+  color: #0f172a;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid #E5E7EB;
@@ -123,7 +132,7 @@ body {
   letter-spacing: -0.025em;
 }
 .main-content h3 {
-  color: #4361ee;
+  color: #0f172a;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
@@ -151,7 +160,7 @@ body {
   margin-bottom: 2.5rem;
 }
 .btn {
-  background-color: #4F46E5;
+  background-color: #0284c7;
   color: white;
   padding: 0.6rem 1.5rem;
   text-decoration: none;
@@ -161,7 +170,7 @@ body {
   transition: background-color 0.2s;
 }
 .btn:hover {
-  background-color: #4338CA;
+  background-color: #0369a1;
 }
 
 /* Example Box */

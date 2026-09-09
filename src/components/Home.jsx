@@ -23,11 +23,11 @@ const Home = () => {
           <h3>Git & GitHub</h3>
           <p>Learn Git commands, GitHub, branching, and collaboration.</p>
         </div>
-        <div className="feature-card">
+        <a href="#challenges" className="feature-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
           <div className="feature-icon">💻</div>
           <h3>Coding Problems</h3>
           <p>Practice JavaScript problems and improve your problem-solving skills.</p>
-        </div>
+        </a>
       </section>
 
       {/* CTA Section */}

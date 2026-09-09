@@ -15,6 +15,7 @@ import FunctionsTutorial from "./components/FunctionsTutorial";
 import ArraysTutorial from "./components/ArraysTutorial";
 import LoopsTutorial from "./components/LoopsTutorial";
 import ObjectsTutorial from "./components/ObjectsTutorial";
+import PracticeChallenges from "./components/PracticeChallenges";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(
@@ -34,10 +35,20 @@ const App = () => {
     <>
       {activeSection === "home" ? (
         <Home />
+      ) : activeSection === "challenges" ? (
+        <>
+          <div className="container" style={{ justifyContent: 'center' }}>
+            <main className="main-content" style={{ margin: '2rem auto' }}>
+              <PracticeChallenges />
+            </main>
+          </div>
+        </>
       ) : (
         <>
           <nav className="top-nav">
-            <h1>DevNotes</h1>
+            <a href="#home" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <h1>DevNotes</h1>
+            </a>
           </nav>
           <div className="container">
           <aside className="sidebar">

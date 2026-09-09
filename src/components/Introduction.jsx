@@ -17,6 +17,7 @@ const Introduction = () => {
       <p>We use JavaScript for many things, including:</p>
       
       <ul className={styles.styledList}>
+
         <li><strong>DOM Manipulation</strong> — Change HTML elements and content on a webpage.</li>
         <li><strong>Event Handling</strong> — Make things happen when a user clicks, types, scrolls, or interacts with a webpage.</li>
         <li><strong>Animations</strong> — Create moving and interactive effects.</li>
@@ -29,6 +30,7 @@ const Introduction = () => {
         <li><strong>Web Applications</strong> — Build applications such as calculators, dashboards, and online stores.</li>
         <li><strong>Backend Development</strong> — Use JavaScript on the server with Node.js.</li>
         <li><strong>Mobile and Desktop Applications</strong> — Build applications using JavaScript-based technologies and frameworks.</li>
+        
       </ul>
     </>
   );

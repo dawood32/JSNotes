@@ -157,11 +157,6 @@ const ArraysTutorial = () => {
       </div>
 
     </>
-
-
-
-
-
   );
 };
 
