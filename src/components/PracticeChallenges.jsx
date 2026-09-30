@@ -26,8 +26,26 @@ console.log(handleFirstLetter("test")); // Test`
 
 capitalizeEachLetter("test");`
   },
-  { title: "Write a function that gets a random number from an array." },
-  { title: "Find the minimum and maximum values in an array." },
+  {
+    title: "Write a function that gets a random number from an array.",
+    solution: `const handleRandomNum=(arr)=>{
+  let randomIndex=Math.floor(Math.random()*arr.length);
+  return arr[randomIndex];
+}
+
+console.log(handleRandomNum([12,32,34,35,26,71]));`
+  },
+  {
+    title: "Find the minimum and maximum values in an array.",
+    solution: `const getMinAndMaxValues = (arr) => {
+  const minValue = Math.min(...arr);
+  const maxValue = Math.max(...arr);
+
+  return [minValue, maxValue];
+};
+
+console.log(getMinAndMaxValues([2, 5, 6, 3, 9]));`
+  },
   { title: "Write a function that reverses only the alphabets in a string, ignoring special characters." },
   { title: "Sum all even numbers in an array." },
   { title: "Find the second largest number in an array." },

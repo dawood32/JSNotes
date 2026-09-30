@@ -19,6 +19,7 @@ body {
   padding: 1.25rem 2.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -37,6 +38,33 @@ body {
 .top-nav h1::before {
   content: "✨";
   font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-weight: 600;
 }
 
 /* Layout */

@@ -16,6 +16,8 @@ import ArraysTutorial from "./components/ArraysTutorial";
 import LoopsTutorial from "./components/LoopsTutorial";
 import ObjectsTutorial from "./components/ObjectsTutorial";
 import PracticeChallenges from "./components/PracticeChallenges";
+import GitTutorial from "./components/GitTutorial";
+import AsyncAwaitTutorial from "./components/AsyncAwaitTutorial";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(
@@ -33,23 +35,35 @@ const App = () => {
 
   return (
     <>
+      <nav className="top-nav">
+        <a href="#home" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h1>DevNotes</h1>
+        </a>
+        {activeSection !== "home" && (
+          <div className="nav-links">
+            <a href="#home" className={activeSection === 'home' ? 'active' : ''}>Home</a>
+            <a href="#intro" className={!['home', 'challenges', 'git'].includes(activeSection) ? 'active' : ''}>JavaScript Notes</a>
+            <a href="#git" className={activeSection === 'git' ? 'active' : ''}>Git & GitHub</a>
+            <a href="#challenges" className={activeSection === 'challenges' ? 'active' : ''}>Coding Problems</a>
+          </div>
+        )}
+      </nav>
+
       {activeSection === "home" ? (
         <Home />
       ) : activeSection === "challenges" ? (
-        <>
-          <div className="container" style={{ justifyContent: 'center' }}>
-            <main className="main-content" style={{ margin: '2rem auto' }}>
-              <PracticeChallenges />
-            </main>
-          </div>
-        </>
+        <div className="container" style={{ justifyContent: 'center' }}>
+          <main className="main-content" style={{ margin: '2rem auto' }}>
+            <PracticeChallenges />
+          </main>
+        </div>
+      ) : activeSection === "git" ? (
+        <div className="container" style={{ justifyContent: 'center' }}>
+          <main className="main-content" style={{ margin: '2rem auto' }}>
+            <GitTutorial />
+          </main>
+        </div>
       ) : (
-        <>
-          <nav className="top-nav">
-            <a href="#home" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <h1>DevNotes</h1>
-            </a>
-          </nav>
           <div className="container">
           <aside className="sidebar">
             <h3>JavaScript Notes</h3>
@@ -69,6 +83,7 @@ const App = () => {
             <a href="#objects" className={activeSection === "objects" ? "active" : ""}>Objects</a>
             
             <h3>JavaScript Advanced</h3>
+            <a href="#async-await" className={activeSection === "async-await" ? "active" : ""}>Async / Await</a>
             <a href="#classes">Classes</a>
             <a href="#modules">Modules</a>
             <a href="#json">JSON</a>
@@ -90,9 +105,9 @@ const App = () => {
             {activeSection === "arrays" && <ArraysTutorial />}
             {activeSection === "loops" && <LoopsTutorial />}
             {activeSection === "objects" && <ObjectsTutorial />}
+            {activeSection === "async-await" && <AsyncAwaitTutorial />}
           </main>
         </div>
-        </>
       )}
     </>
   );

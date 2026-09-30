@@ -18,11 +18,11 @@ const Home = () => {
           <h3>JavaScript Notes</h3>
           <p>Learn JavaScript with simple explanations and practical examples.</p>
         </a>
-        <div className="feature-card">
+        <a href="#git" className="feature-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
           <div className="feature-icon">🐙</div>
           <h3>Git & GitHub</h3>
           <p>Learn Git commands, GitHub, branching, and collaboration.</p>
-        </div>
+        </a>
         <a href="#challenges" className="feature-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
           <div className="feature-icon">💻</div>
           <h3>Coding Problems</h3>
